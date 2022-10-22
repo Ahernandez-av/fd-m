@@ -2,6 +2,7 @@
 
 :root {
     --deep-aquamarine: hsl(158, 36%, 37%);
+    --deep-aquamarine-hover: #1A4032;
     --cream: hsl(30, 38%, 92%);
     --gunmetal: hsl(212, 21%, 14%);
     --aurometal-saurus: hsl(228, 12%, 48%);
@@ -10,6 +11,10 @@
 
 h2,h6,p {
     margin: 0;
+}
+
+e {
+    text-decoration: line-through;
 }
 
 body {
@@ -101,10 +106,22 @@ button::before {
     margin-inline-end: 16px;
 }
 
+button:hover {
+    background-color: var(--deep-aquamarine-hover);
+    cursor: pointer;
+}
+
 @media (min-width: 800px) {
     article {
         flex-direction: row;
         inline-size: 600px;
+        block-size: 450px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     img {
