@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --deep-aquamarine: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --gunmetal: hsl(212, 21%, 14%);
+    --aurometal-saurus: hsl(228, 12%, 48%);
+    --pure-white: hsl(0, 0%, 100%);
+}
+
+h2,h6,p {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    block-size: 100vh;
+    background-color: var(--cream);
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--aurometal-saurus);
+    padding-inline: 16px;
+    padding-block: 28px;
+}
+
+.display {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.overline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.63px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--aurometal-saurus);
+}
+
+h2 {
+    margin-block-start: 12px;
+    margin-block-end: 16px;
+    color: var(--gunmetal);
+}
+
+hgroup {
+    margin-block-end: 24px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    inline-size: 343px;
+    border-radius: 10px;
+    background-color: var(--pure-white);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+section {
+    padding-inline: 24px;
+    padding-block: 24px;
+    box-sizing: border-box;
+}
+
+hgroup ~ div {
+    display: flex;
+    align-items: center;
+}
+
+div p {
+    margin-inline-end: 19px;
+    color: var(--deep-aquamarine);
+}
+
+button {
+    margin-block-start: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17.07px;
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--deep-aquamarine);
+    inline-size: 100%;
+    color: var(--pure-white);
+    padding-block: 16px;
+    padding-inline: 0;
+}
+
+button::before {
+    content: url("images/cart.svg");
+    margin-inline-end: 16px;
+}
+
+@media (min-width: 800px) {
+    article {
+        flex-direction: row;
+        inline-size: 600px;
+    }
+
+    img {
+        inline-size: 300px;
+    }
+}
