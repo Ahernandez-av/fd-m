@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --soft-blue: #8BACD9;
+    --white: #FFF;
+    --cyan: #00FFF8;
+    --very-dark-blue: #0D192C;
+    --dark-blue: #15263F;
+    --misc-blue: #2E405A;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--very-dark-blue);
+    font-family: 'Outfit', sans-serif;
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--white);
+}
+
+caption {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    inline-size: 350px;
+    padding-inline: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 32px;
+    background-color: var(--dark-blue);
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+    border-radius: 15px;
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .price {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.caption-icon::before {
+    margin-inline-end: 6px;
+    vertical-align: middle;
+}
+
+.card .price::before {
+    content: url("images/icon-ethereum.svg");
+}
+
+.card .time::before {
+    content: url("images/icon-clock.svg");
+}
+
+.card footer {
+    display: flex;
+    align-items: center;
+    border-block-start: 1px var(--misc-blue) solid;
+}
+
+.card .avatar {
+    inline-size: 33px;
+    block-size: 33px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-inline-end: 16px;
+}
+
+.card footer em {
+    font-style: normal;
+    color: var(--white);
+}
+
+.card .description {
+  
+}
