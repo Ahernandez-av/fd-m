@@ -1,0 +1,19 @@
+/* || GENERAL STYLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1,125rem;
+    color: #83869A;
+    line-height: 1,75;
+}
+
+header {
+    display: flex;
+}
+
+/* || UTILITIES */
+
+/* || SITE WIDE */
