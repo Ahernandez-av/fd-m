@@ -150,6 +150,23 @@ header {
     margin-block-end: 1.5rem;
 }
 
+.hero-image {
+    background-image: url(images/image-hero-mobile@2x.webp);
+    background-image: webkit-image-set(
+        url(images/image-hero-mobile.webp) 1x,
+        url(images/image-hero-mobile@2x.webp) 2x
+    );
+    background-image: image-set(
+        url(images/image-hero-mobile.webp) 1x,
+        url(images/image-hero-mobile@2x.webp) 2x
+    );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 400px;
+    width: 100%;
+}
+
 /* || TABLET */
 
 @media (min-width: 768px) {
@@ -164,10 +181,9 @@ header {
             url(images/image-hero-tablet.webp) 1x,
             url(images/image-hero-tablet@2x.webp) 2x
         );
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 51vw -10%;
         background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50vw -80px;
     }
 
     /* Header */
@@ -180,18 +196,60 @@ header {
     /* Hero */
 
     #hero {
+        height: 490px;
         flex-direction: row;
-        align-items: center;
-        height: 523px;
+        position: relative;
     }
     
     .hero-container {
         width: 52%;
         margin-inline: 2.5rem;
+        align-self: center;
     }
 
-    #hero img {
+    .hero-image {
         display: none;
+    }
+
+}
+
+/* || DESKTOP */
+
+@media (min-width: 1440px) {
+
+    body {
+        background-image: url(images/image-hero-desktop@2x.webp);
+        background-image: webkit-image-set(
+            url(images/image-hero-desktop.webp) 1x,
+            url(images/image-hero-desktop@2x.webp) 2x
+        );
+        background-image: image-set(
+            url(images/image-hero-desktop.webp) 1x,
+            url(images/image-hero-desktop@2x.webp) 2x
+        );
+        background-repeat: no-repeat;
+        background-position: 51vw -150px;
+        background-size: 991px;
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    /* Hero */
+
+    #hero {
+        flex-direction: row;
+        align-items: center;
+        height: 627px;
+    }
+
+    .hero-container {
+        width: 45%;
+        margin-inline: 2.5rem;
+    }
+
+    .hero-container p {
+        margin-block-start: 2rem;
+        margin-block-end: 2.5rem;
     }
 
 }
