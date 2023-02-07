@@ -14,6 +14,13 @@
     --sublime-vivid: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
 }
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body {
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
     margin: 0;
@@ -145,7 +152,7 @@ header {
     margin-block-end: 1rem;
 }
 
-.hero-container p {
+.hero-container .body {
     margin-block-start: 1.625rem;
     margin-block-end: 1.5rem;
 }
@@ -166,6 +173,58 @@ header {
     height: 400px;
     width: 100%;
 }
+
+/* Courses */
+
+#courses {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: 1rem;
+    margin-block-end: 1rem;
+}
+
+.card-title {
+    width: 100%;
+    padding-inline: 1.75rem;
+    padding-block-start: 1.5rem;
+    padding-block-end: 2rem;
+    background: var(--orange-fun);
+    border-radius: 0.625rem;
+    margin-block: 1rem;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    padding-inline: 1.75rem;
+    padding-block-start: 3.5rem;
+    padding-block-end: 2rem;
+    background-color: var(--white);
+    border-radius: 0.625rem;
+    margin-block: 1.5rem;
+}
+
+.card img {
+    position: absolute;
+    inset-block-start: -24px;
+}
+
+.card .body {
+    margin-block-start: 1rem;
+    margin-block-end: 2rem;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2.25rem;
+    padding-inline: 1rem;
+    background-color: var(--yankees-blue);
+}
+
 
 /* || TABLET */
 
@@ -199,6 +258,7 @@ header {
         height: 490px;
         flex-direction: row;
         position: relative;
+        margin-block-end: 6rem;
     }
     
     .hero-container {
@@ -209,6 +269,23 @@ header {
 
     .hero-image {
         display: none;
+    }
+
+    /* Courses */
+
+    #courses {
+        gap: 16px;
+    }
+
+    .card-title {
+        width: 48%;
+        margin-block: 0;
+        height: 259px;
+    }
+    
+    .card {
+        width: 48%;
+        margin-block: 0;
     }
 
 }
@@ -243,7 +320,7 @@ header {
     }
 
     .hero-container {
-        width: 45%;
+        width: 40%;
         margin-inline: 2.5rem;
     }
 
