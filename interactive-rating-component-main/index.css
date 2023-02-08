@@ -1,0 +1,50 @@
+/* || GENERAL */
+
+:root {
+    /* Primary Colors*/
+    --Orange: hsl(25, 97%, 53%);
+    /* Neutral  Colors*/
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    /* Typography */
+    font-family: 'Overpass', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 25.75rem;
+}
+
+/* || TYPOGRAPHY */
+
+.heading {
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.2661;
+}
+
+/* || UTILITIES */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
