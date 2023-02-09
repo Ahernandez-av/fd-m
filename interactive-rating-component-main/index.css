@@ -15,7 +15,7 @@
 
 html {
     box-sizing: border-box;
-    height: 100%;
+    block-size: 100%;
     background-color: var(--Very-Dark-Blue);
 }
 
@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    block-size: 100%;
 }
 
 button {
@@ -65,6 +65,7 @@ button {
 @media(min-width: 1440px) {
     .heading {
         font-size: 1.75rem;
+        margin-block-start: 2rem;
     }
 
     .body {
@@ -74,12 +75,12 @@ button {
 
 /* || UTILITIES */
 
-.hide {
-    display: none;
+.show {
+    visibility: visible;
 }
 
-.show {
-    display: block;
+.hide {
+    visibility: hidden;
 }
 
 .text-align {
@@ -90,12 +91,39 @@ button {
     color: var(--Orange);
 }
 
+.fadeout {
+    animation: fadeout 0.2s linear forwards;
+  }
+  
+  @keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+  
+    to {
+        opacity: 0;
+    }
+  }
+
+.fadein {
+    animation: fadein 0.5s linear forwards;
+  }
+  
+  @keyframes fadein {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }
+
 /* ||General Styles */
 
-/* Rating */
-
 .card {
-    width: 20.4375rem;
+    inline-size: 20.4375rem;
+    block-size: 22.5rem;
     padding-inline: 1.5rem;
     padding-block-start: 1.5rem;
     padding-block-end: 2rem;
@@ -103,12 +131,14 @@ button {
     background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
 }
 
+/* Rating */
+
 .card .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
     border-radius: 50%;
     background-color: var(--Dark-Blue);
 }
@@ -125,25 +155,26 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width: 2.625rem;
-    height: 2.625rem;
+    inline-size: 2.625rem;
+    block-size: 2.625rem;
     background-color: var(--Dark-Blue);
     color: var(--Medium-Grey);
     text-align: center;
 }
 
-.rating:active {
-    color: var(--White);
-    background-color: var(--Orange);
-}
-
-.rating:hover {
+.rating:active,
+.active {
     color: var(--White);
     background-color: var(--Medium-Grey);
 }
 
+.rating:hover {
+    color: var(--White);
+    background-color: var(--Orange);
+}
+
 .submit {
-    width: 100%;
+    inline-size: 100%;
     color: var(--White);
     border-radius: 22.5px;
     background-color: var(--Orange);
@@ -161,6 +192,8 @@ button {
 
 .thanks-state {
     text-align: center;
+    position: relative;
+    inset-block-start: -300px;
 }
 
 .pill {
@@ -169,4 +202,62 @@ button {
     padding-block: 0.5rem;
     background-color: var(--Dark-Blue);
     border-radius: 1.406rem;
+    margin-block-start: 1.5rem;
+    margin-block-end: 0.5rem;
+}
+
+.thanks-state img {
+    block-size: 6rem;
+}
+
+/* || DESKTOP */
+
+@media(min-width: 1440px) {
+
+    button {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .card {
+        inline-size: 25.75rem;
+        block-size: 26rem;
+        padding-inline: 2rem;
+        padding-block: 2rem;
+    }
+
+    /* Rating */
+
+    .rating {
+        padding-block-start: 0.2rem;
+        inline-size: 3.1875rem;
+        block-size: 3.1875rem;
+    }
+
+    .rating-container {
+        margin-block-end: 2rem;
+    }
+
+    .card .icon {
+        inline-size: 3rem;
+        block-size: 3rem;
+    }
+
+    /* Thanks */
+
+    .thanks-state {
+        margin-block-start: 1rem;
+    }
+
+    .thanks-state img {
+        margin: 0 auto;
+        display: block;
+        inline-size: 10.125rem;
+    }
+
+    .pill {
+        margin-block-end: 0;
+        margin-block-start: 2rem;
+    }
+
 }
